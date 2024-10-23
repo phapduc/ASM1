@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/c1.css">
+</head>
+<body>
+    <header id="header"> </header>
+    <nav id="menu"> 
+        <a href="#top">Trang chủ</a>
+        <a href="#listtour"> Tour du lịch</a>
+        <a href="#listkhachhang"> Khách hàng</a>
+        <a href="#listdiadiem"> Địa điểm du lịch</a>
+        <a href="#listthuonghieu"> Thương hiệu du lịch</a>
+    </nav>
+    <main> 
+        <section id="listtour">
+            <h2>Danh sách tour du lịch</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listkhachhang">
+            <h2>Danh sách khách hàng</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listdiadiem">
+            <h2>Danh sách địa điểm du lịch</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listthuonghieu">
+            <h2>Thương hiệu du lịch</h2>
+            <div id="data"></div>
+        </section>
+    </main>
+    <footer> Họ tên sinh viên: Hà Việt Đức Pháp</footer>
+</body>
+</html>
+<script type="module">
+   import { showlisttour, showlistkhachhang, showlistdiadiem, showlistthuonghieu } from './js/app.js';
+   document.querySelector("#listtour #data").innerHTML = showlisttour();
+   document.querySelector("#listkhachhang #data").innerHTML = showlistkhachhang();
+   document.querySelector("#listdiadiem #data").innerHTML = showlistdiadiem();
+   document.querySelector("#listthuonghieu #data").innerHTML = await showlistthuonghieu();
+
+</script>
